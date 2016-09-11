@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
-  
+  <title>Meteor&#39;s Blog</title>
+  <subtitle>分享 总结 反思</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://Meteor-chan.github.io/"/>
   <updated>2016-09-11T02:07:54.221Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://Meteor-chan.github.io/</id>
   
   <author>
-    <name>Meteor-chan&#39;s Blog</name>
-    
+    <name>Meteor_chan</name>
+    <email>Meteor_Chan@163.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/09/11/hello-world/"/>
-    <id>http://yoursite.com/2016/09/11/hello-world/</id>
+    <link href="http://Meteor-chan.github.io/2016/09/11/hello-world/"/>
+    <id>http://Meteor-chan.github.io/2016/09/11/hello-world/</id>
     <published>2016-09-11T02:07:54.218Z</published>
     <updated>2016-09-11T02:07:54.221Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2016/09/03/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2016/09/03/单例模式/</id>
+    <link href="http://Meteor-chan.github.io/2016/09/03/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://Meteor-chan.github.io/2016/09/03/单例模式/</id>
     <published>2016-09-03T12:48:45.444Z</published>
     <updated>2016-09-11T04:24:56.507Z</updated>
     
