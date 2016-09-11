@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Meteor-chan.github.io/"/>
-  <updated>2016-09-11T16:11:01.109Z</updated>
+  <updated>2016-09-11T16:18:14.911Z</updated>
   <id>http://Meteor-chan.github.io/</id>
   
   <author>
@@ -19,12 +19,20 @@
     <title>搭建Github+Hexo博客</title>
     <link href="http://Meteor-chan.github.io/2016/09/12/%E6%90%AD%E5%BB%BAGithub-Hexo%E5%8D%9A%E5%AE%A2/"/>
     <id>http://Meteor-chan.github.io/2016/09/12/搭建Github-Hexo博客/</id>
-    <published>2016-09-11T16:11:01.000Z</published>
-    <updated>2016-09-11T16:11:01.109Z</updated>
+    <published>2016-09-11T16:16:27.000Z</published>
+    <updated>2016-09-11T16:18:14.911Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先，我们通过hexo n “name”命令来新建一个页面，在source/_posts目录下找到刚才新建的name.md文件，用记事本或者sublime text打开。<br>我们看到默认的页面是这样的：</p>
+]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;首先，我们通过hexo n “name”命令来新建一个页面，在source/_posts目录下找到刚才新建的name.md文件，用记事本或者sublime text打开。&lt;br&gt;我们看到默认的页面是这样的：&lt;/p&gt;
+
+    
     </summary>
+    
+      <category term="博客,Hexo" scheme="http://Meteor-chan.github.io/categories/%E5%8D%9A%E5%AE%A2-Hexo/"/>
     
     
   </entry>
