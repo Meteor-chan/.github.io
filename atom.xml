@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Meteor-chan.github.io/"/>
-  <updated>2016-09-11T13:01:17.892Z</updated>
+  <updated>2016-09-11T13:02:18.270Z</updated>
   <id>http://Meteor-chan.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://Meteor-chan.github.io/2016/09/03/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
     <id>http://Meteor-chan.github.io/2016/09/03/单例模式/</id>
     <published>2016-09-03T12:48:45.444Z</published>
-    <updated>2016-09-11T13:01:17.892Z</updated>
+    <updated>2016-09-11T13:02:18.270Z</updated>
     
     <content type="html"><![CDATA[<p>单例模式的简介<br><a id="more"></a></p>
 <h4 id="单例模式的定义"><a href="#单例模式的定义" class="headerlink" title="单例模式的定义"></a>单例模式的定义</h4><p>单例模式的定义如下：<br>Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）</p>
@@ -54,9 +54,7 @@
     </summary>
     
     
-      <category term="设计模式" scheme="http://Meteor-chan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="编程" scheme="http://Meteor-chan.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+      <category term="设计模式，编程" scheme="http://Meteor-chan.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%8C%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
