@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Meteor-chan.github.io/"/>
-  <updated>2016-09-11T16:41:48.637Z</updated>
+  <updated>2016-09-12T04:24:31.117Z</updated>
   <id>http://Meteor-chan.github.io/</id>
   
   <author>
@@ -16,31 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>搭建Github+Hexo博客</title>
-    <link href="http://Meteor-chan.github.io/2016/09/12/%E6%90%AD%E5%BB%BAGithub-Hexo%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://Meteor-chan.github.io/2016/09/12/搭建Github-Hexo博客/</id>
-    <published>2016-09-11T16:16:27.000Z</published>
-    <updated>2016-09-11T16:41:48.637Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="博客" scheme="http://Meteor-chan.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="Hexo" scheme="http://Meteor-chan.github.io/categories/%E5%8D%9A%E5%AE%A2/Hexo/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>设计模式之单例</title>
     <link href="http://Meteor-chan.github.io/2016/09/03/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
     <id>http://Meteor-chan.github.io/2016/09/03/单例模式/</id>
     <published>2016-09-03T12:48:45.444Z</published>
-    <updated>2016-09-11T16:49:49.479Z</updated>
+    <updated>2016-09-12T04:24:31.117Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="单例模式的定义"><a href="#单例模式的定义" class="headerlink" title="单例模式的定义"></a>单例模式的定义</h4><p>单例模式的定义如下：<br>Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）</p>
+    <content type="html"><![CDATA[<p>单例模式的定义如下：<br>Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）</p>
+<a id="more"></a>
+<h4 id="单例模式的定义"><a href="#单例模式的定义" class="headerlink" title="单例模式的定义"></a>单例模式的定义</h4><p>单例模式的定义如下：<br>Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）</p>
 <h4 id="单例模式的通用写法"><a href="#单例模式的通用写法" class="headerlink" title="单例模式的通用写法"></a>单例模式的通用写法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 饿汉式写法</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton singleton = <span class="keyword">new</span> Singleton();</div><div class="line"></div><div class="line">	<span class="comment">//让类构造方法私有化，使其不能为外界获取</span></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//通过该方法获取Singleton实例</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> singleton;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//该类中的其他方法，尽量为static方法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>&#123;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 懒汉式写法</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</div><div class="line"> 	<span class="keyword">protected</span> <span class="keyword">static</span> <span class="keyword">final</span> Object object = <span class="keyword">new</span> Object();</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">	<span class="comment">//使构造方法私有化</span></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//通过该方法获取Singleton实例</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">synchronized</span>(object)&#123;</div><div class="line">			<span class="keyword">if</span>(singleton == <span class="keyword">null</span>)&#123;</div><div class="line">				singleton = <span class="keyword">new</span> Singleton();</div><div class="line">			&#125;</div><div class="line">				<span class="keyword">return</span> singleton;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//类中其他方法，尽量为static方法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doSomwthing</span><span class="params">()</span></span>&#123;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="单例模式的优缺点"><a href="#单例模式的优缺点" class="headerlink" title="单例模式的优缺点"></a>单例模式的优缺点</h4><ul>
 <li>优点</li>
@@ -66,7 +50,7 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;单例模式的定义&quot;&gt;&lt;a href=&quot;#单例模式的定义&quot; class=&quot;headerlink&quot; title=&quot;单例模式的定义&quot;&gt;&lt;/a&gt;单例模式的定义&lt;/h4&gt;&lt;p&gt;单例模式的定义如下：&lt;br&gt;Ensure a class has only one instance
+      &lt;p&gt;单例模式的定义如下：&lt;br&gt;Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）&lt;/p&gt;
     
     </summary>
     
