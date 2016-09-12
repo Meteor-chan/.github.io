@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Meteor-chan.github.io/"/>
-  <updated>2016-09-12T06:47:29.598Z</updated>
+  <updated>2016-09-12T06:50:17.989Z</updated>
   <id>http://Meteor-chan.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://Meteor-chan.github.io/2016/09/12/%E4%BD%BF%E7%94%A8Github-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://Meteor-chan.github.io/2016/09/12/使用Github-Hexo搭建博客/</id>
     <published>2016-09-11T16:16:27.000Z</published>
-    <updated>2016-09-12T06:47:29.598Z</updated>
+    <updated>2016-09-12T06:50:17.989Z</updated>
     
     <content type="html"><![CDATA[<h2 id="软件准备"><a href="#软件准备" class="headerlink" title="软件准备"></a>软件准备</h2><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Node.js</a><br><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></p>
 <h2 id="配置SSH-Keys"><a href="#配置SSH-Keys" class="headerlink" title="配置SSH Keys"></a>配置SSH Keys</h2><h4 id="1-检查本机的SSH-keys的设置"><a href="#1-检查本机的SSH-keys的设置" class="headerlink" title="1.检查本机的SSH keys的设置"></a>1.检查本机的SSH keys的设置</h4><blockquote>
@@ -41,7 +41,7 @@
 <blockquote>
 <p>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;<br>Enter same passphrase again:&lt;再次输入加密串&gt;</p>
 </blockquote>
-<p>注意：在提交密码时，是没有*字样的，所以直接输入就好<br>最后看到如下图所示，SSH key 设置就成功了<br><img src="http://oddhmbjny.bkt.clouddn.com/ssh-key-set.png" alt="SSH key"></p>
+<p>注意：在提交密码时，是没有*字样的，所以直接输入就好<br>最后看到如下图所示，SSH key 设置就成功了<br><img src="http://oddhmbjny.bkt.clouddn.com/ssh-key-set.png" alt=""></p>
 <h4 id="3-添加SSH-key到Github账户"><a href="#3-添加SSH-key到Github账户" class="headerlink" title="3.添加SSH key到Github账户"></a>3.添加SSH key到Github账户</h4><p>在本机上生成SSH key之后，需要将SSH key添加到Github账户中以完成链接。</p>
 <ul>
 <li>首先在C盘Administrator(用户)文件夹下，找到.ssh文件夹，如果找不到文件夹，需要设置显示隐藏文件。在该文件夹下找到id_rsa.pub，使用文本编辑器打开。复制此文件所有内容。</li>
@@ -70,7 +70,7 @@
 <ol>
 <li>登陆Github账户，创建一个repository，Repository name为username.github.io(此处的username为你的用户名)</li>
 <li>进入该项目，点击Settings，找到Launch automatic page generator并点击，一直下一步即可。</li>
-<li>通过<a href="http://username.github.io访问静态网站，如[Meteor-chan.github.io][4" target="_blank" rel="external">http://username.github.io访问静态网站，如[Meteor-chan.github.io][4</a>]</li>
+<li>通过<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 访问静态网站，如 <a href="http://meteor-chan.github.io">Meteor-chan.github.io</a></li>
 </ol>
 ]]></content>
     
