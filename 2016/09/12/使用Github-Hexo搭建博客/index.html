@@ -4,22 +4,55 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Meteor&#39;s Blog</title>
+    <title>搭建Github+Hexo博客 | Meteor&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Meteor_chan">
     
 
     
-    <meta name="description" content="分享 总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Meteor's Blog">
-<meta property="og:url" content="http://Meteor-chan.github.io/index.html">
+    <meta name="description" content="软件准备Node.jsGit
+配置SSH Keys####1.检查本机的SSH keys的设置
+
+$ cd ~/.ssh
+
+如果提示 No such file or diretory 说明你是第一次使用git
+2.生成新的SSH keys：
+$ ssh-keygen -t rsa -C “example@email.com”
+
+注意：上面的C为大写，之后的邮箱地址填上你自己的邮箱地址。 
+接着系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建Github+Hexo博客">
+<meta property="og:url" content="http://Meteor-chan.github.io/2016/09/12/使用Github-Hexo搭建博客/index.html">
 <meta property="og:site_name" content="Meteor's Blog">
-<meta property="og:description" content="分享 总结">
+<meta property="og:description" content="软件准备Node.jsGit
+配置SSH Keys####1.检查本机的SSH keys的设置
+
+$ cd ~/.ssh
+
+如果提示 No such file or diretory 说明你是第一次使用git
+2.生成新的SSH keys：
+$ ssh-keygen -t rsa -C “example@email.com”
+
+注意：上面的C为大写，之后的邮箱地址填上你自己的邮箱地址。 
+接着系统">
+<meta property="og:image" content="http://oddhmbjny.bkt.clouddn.com/ssh-key-set.png">
+<meta property="og:updated_time" content="2016-09-12T06:43:59.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Meteor's Blog">
-<meta name="twitter:description" content="分享 总结">
+<meta name="twitter:title" content="搭建Github+Hexo博客">
+<meta name="twitter:description" content="软件准备Node.jsGit
+配置SSH Keys####1.检查本机的SSH keys的设置
+
+$ cd ~/.ssh
+
+如果提示 No such file or diretory 说明你是第一次使用git
+2.生成新的SSH keys：
+$ ssh-keygen -t rsa -C “example@email.com”
+
+注意：上面的C为大写，之后的邮箱地址填上你自己的邮箱地址。 
+接着系统">
+<meta name="twitter:image" content="http://oddhmbjny.bkt.clouddn.com/ssh-key-set.png">
 
     
     <link rel="alternative" href="/atom.xml" title="Meteor&#39;s Blog" type="application/atom+xml">
@@ -73,12 +106,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/09/12/使用Github-Hexo搭建博客/" title="搭建Github+Hexo博客" itemprop="url">搭建Github+Hexo博客</a>
@@ -92,9 +123,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h2 id="软件准备"><a href="#软件准备" class="headerlink" title="软件准备"></a>软件准备</h2><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Node.js</a><br><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件准备"><span class="toc-number">1.</span> <span class="toc-text">软件准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH-Keys"><span class="toc-number">2.</span> <span class="toc-text">配置SSH Keys</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-生成新的SSH-keys："><span class="toc-number">2.0.1.</span> <span class="toc-text">2.生成新的SSH keys：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-添加SSH-key到Github账户"><span class="toc-number">2.0.2.</span> <span class="toc-text">3.添加SSH key到Github账户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-测试"><span class="toc-number">2.0.3.</span> <span class="toc-text">4.测试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置用户信息"><span class="toc-number">3.</span> <span class="toc-text">配置用户信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH-key成功配置"><span class="toc-number">4.</span> <span class="toc-text">SSH key成功配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Github-Pages建立博客"><span class="toc-number">5.</span> <span class="toc-text">使用Github Pages建立博客</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="软件准备"><a href="#软件准备" class="headerlink" title="软件准备"></a>软件准备</h2><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Node.js</a><br><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></p>
 <h2 id="配置SSH-Keys"><a href="#配置SSH-Keys" class="headerlink" title="配置SSH Keys"></a>配置SSH Keys</h2><p>####1.检查本机的SSH keys的设置</p>
 <blockquote>
 <p>$ cd ~/.ssh</p>
@@ -139,14 +177,9 @@
 <li>进入该项目，点击Settings，找到Launch automatic page generator并点击，一直下一步即可。</li>
 <li>通过<a href="http://username.github.io访问静态网站，如[Meteor-chan.github.io][4" target="_blank" rel="external">http://username.github.io访问静态网站，如[Meteor-chan.github.io][4</a>]</li>
 </ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -164,80 +197,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://Meteor-chan.github.io/2016/09/12/使用Github-Hexo搭建博客/" data-title="搭建Github+Hexo博客 | Meteor&#39;s Blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/03/单例模式/" title="设计模式之单例" itemprop="url">设计模式之单例</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Meteor_chan" target="_blank" itemprop="author">Meteor_chan</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-03T12:48:45.444Z" itemprop="datePublished"> 发表于 2016-09-03</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>单例模式的定义如下：<br>Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2016/09/03/单例模式/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/编程/">编程</a><a href="/tags/设计模式/">设计模式</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/09/03/单例模式/"  title="设计模式之单例">
+ <strong>下一篇：</strong><br/> 
+ <span>设计模式之单例
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
+	
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件准备"><span class="toc-number">1.</span> <span class="toc-text">软件准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH-Keys"><span class="toc-number">2.</span> <span class="toc-text">配置SSH Keys</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-生成新的SSH-keys："><span class="toc-number">2.0.1.</span> <span class="toc-text">2.生成新的SSH keys：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-添加SSH-key到Github账户"><span class="toc-number">2.0.2.</span> <span class="toc-text">3.添加SSH key到Github账户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-测试"><span class="toc-number">2.0.3.</span> <span class="toc-text">4.测试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置用户信息"><span class="toc-number">3.</span> <span class="toc-text">配置用户信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH-key成功配置"><span class="toc-number">4.</span> <span class="toc-text">SSH key成功配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Github-Pages建立博客"><span class="toc-number">5.</span> <span class="toc-text">使用Github Pages建立博客</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -398,12 +394,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -474,4 +547,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
