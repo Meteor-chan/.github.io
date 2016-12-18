@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Meteor-chan.github.io/"/>
-  <updated>2016-12-18T06:42:50.368Z</updated>
+  <updated>2016-12-18T06:46:27.841Z</updated>
   <id>http://Meteor-chan.github.io/</id>
   
   <author>
@@ -20,18 +20,20 @@
     <link href="http://Meteor-chan.github.io/2016/11/23/%E5%9B%BE%E8%A7%A3HTTP%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>http://Meteor-chan.github.io/2016/11/23/图解HTTP第一章读书笔记/</id>
     <published>2016-11-23T15:24:23.387Z</published>
-    <updated>2016-12-18T06:42:50.368Z</updated>
+    <updated>2016-12-18T06:46:27.841Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Web及网络基础"><a href="#Web及网络基础" class="headerlink" title="Web及网络基础"></a>Web及网络基础</h2><h3 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP/IP协议"></a>TCP/IP协议</h3><h4 id="TCP-IP协议的分层管理"><a href="#TCP-IP协议的分层管理" class="headerlink" title="TCP/IP协议的分层管理"></a>TCP/IP协议的分层管理</h4><p>TCP/IP协议族按层次分为四层，分别为：应用层，传输层，网络层，数据链路层</p>
 <ul>
-<li>应用层：决定了向用户提供应用服务通信的活动，预存了通用的通信的各种协议，比如说FTP(File Transfer Protocol,文件传输协议)，DNS(Domin Name System,域名系统)，HTTP协议等等。</li>
+<li>应用层：决定了向用户提供应用服务通信的活动，预存了通用的通信的各种协议，比如说FTP(File Transfer Protocol,文件传输协议)，DNS(Domin Name System,域名系统)，HTTP协议等等。<a id="more"></a></li>
 <li></li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Web及网络基础&quot;&gt;&lt;a href=&quot;#Web及网络基础&quot; class=&quot;headerlink&quot; title=&quot;Web及网络基础&quot;&gt;&lt;/a&gt;Web及网络基础&lt;/h2&gt;&lt;h3 id=&quot;TCP-IP协议&quot;&gt;&lt;a href=&quot;#TCP-IP协议&quot; class=&quot;head
+      &lt;h2 id=&quot;Web及网络基础&quot;&gt;&lt;a href=&quot;#Web及网络基础&quot; class=&quot;headerlink&quot; title=&quot;Web及网络基础&quot;&gt;&lt;/a&gt;Web及网络基础&lt;/h2&gt;&lt;h3 id=&quot;TCP-IP协议&quot;&gt;&lt;a href=&quot;#TCP-IP协议&quot; class=&quot;headerlink&quot; title=&quot;TCP/IP协议&quot;&gt;&lt;/a&gt;TCP/IP协议&lt;/h3&gt;&lt;h4 id=&quot;TCP-IP协议的分层管理&quot;&gt;&lt;a href=&quot;#TCP-IP协议的分层管理&quot; class=&quot;headerlink&quot; title=&quot;TCP/IP协议的分层管理&quot;&gt;&lt;/a&gt;TCP/IP协议的分层管理&lt;/h4&gt;&lt;p&gt;TCP/IP协议族按层次分为四层，分别为：应用层，传输层，网络层，数据链路层&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用层：决定了向用户提供应用服务通信的活动，预存了通用的通信的各种协议，比如说FTP(File Transfer Protocol,文件传输协议)，DNS(Domin Name System,域名系统)，HTTP协议等等。
     
     </summary>
     
@@ -47,9 +49,9 @@
     <link href="http://Meteor-chan.github.io/2016/11/20/%E4%BB%8ERaw%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6/"/>
     <id>http://Meteor-chan.github.io/2016/11/20/从Raw中读取文件/</id>
     <published>2016-11-20T14:30:52.495Z</published>
-    <updated>2016-12-18T06:31:53.207Z</updated>
+    <updated>2016-12-18T06:46:31.028Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="从Raw中读取文件"><a href="#从Raw中读取文件" class="headerlink" title="从Raw中读取文件"></a>从Raw中读取文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从Raw中读取文件转换为流</span></div><div class="line">inputStream is = getResource().openRowResource(R.raw.fileName);</div><div class="line">&lt;!-- more --&gt;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getString</span><span class="params">(inputStream is)</span></span>&#123;</div><div class="line">	inputStreamReader isr = <span class="keyword">null</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		isr = <span class="keyword">new</span> inputStreamReader(is,charSetType);</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	bufferReader br = <span class="keyword">new</span> bufferReader(isr);</div><div class="line">	StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		<span class="keyword">while</span>((line = br.readLine()) != <span class="keyword">null</span>)&#123;</div><div class="line"></div><div class="line">			sb.append(line);</div><div class="line">			sb.append(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> sb.toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="从Raw中读取文件"><a href="#从Raw中读取文件" class="headerlink" title="从Raw中读取文件"></a>从Raw中读取文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从Raw中读取文件转换为流</span></div><div class="line">inputStream is = getResource().openRowResource(R.raw.fileName);</div><div class="line">&lt;!-- more --&gt;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getString</span><span class="params">(inputStream is)</span></span>&#123;</div><div class="line">	inputStreamReader isr = <span class="keyword">null</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		isr = <span class="keyword">new</span> inputStreamReader(is,charSetType);</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	bufferReader br = <span class="keyword">new</span> bufferReader(isr);</div><div class="line">	StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		<span class="keyword">while</span>((line = br.readLine()) != <span class="keyword">null</span>)&#123;</div><div class="line"></div><div class="line">			sb.append(line);</div><div class="line">			sb.append(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> sb.toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -69,13 +71,13 @@
     <link href="http://Meteor-chan.github.io/2016/09/12/%E4%BD%BF%E7%94%A8Github-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://Meteor-chan.github.io/2016/09/12/使用Github-Hexo搭建博客/</id>
     <published>2016-09-11T16:16:27.000Z</published>
-    <updated>2016-12-18T06:38:18.705Z</updated>
+    <updated>2016-12-18T06:46:39.886Z</updated>
     
     <content type="html"><![CDATA[<h2 id="软件准备"><a href="#软件准备" class="headerlink" title="软件准备"></a>软件准备</h2><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Node.js</a><br><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></p>
 <h2 id="配置SSH-Keys"><a href="#配置SSH-Keys" class="headerlink" title="配置SSH Keys"></a>配置SSH Keys</h2><h3 id="1-检查本机的SSH-keys的设置"><a href="#1-检查本机的SSH-keys的设置" class="headerlink" title="1.检查本机的SSH keys的设置"></a>1.检查本机的SSH keys的设置</h3><blockquote>
 <p>$ cd ~/.ssh</p>
 </blockquote>
-<p>如果提示 No such file or diretory 说明你是第一次使用git</p>
+<p>如果提示 No such file or diretory 说明你是第一次使用git<br><a id="more"></a></p>
 <h3 id="2-生成新的SSH-keys："><a href="#2-生成新的SSH-keys：" class="headerlink" title="2.生成新的SSH keys："></a>2.生成新的SSH keys：</h3><blockquote>
 <p>$ ssh-keygen -t rsa -C “example@email.com”</p>
 </blockquote>
@@ -173,7 +175,11 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;软件准备&quot;&gt;&lt;a href=&quot;#软件准备&quot; class=&quot;headerlink&quot; title=&quot;软件准备&quot;&gt;&lt;/a&gt;软件准备&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;exter
+      &lt;h2 id=&quot;软件准备&quot;&gt;&lt;a href=&quot;#软件准备&quot; class=&quot;headerlink&quot; title=&quot;软件准备&quot;&gt;&lt;/a&gt;软件准备&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/zh-cn/&quot;&gt;Node.js&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;配置SSH-Keys&quot;&gt;&lt;a href=&quot;#配置SSH-Keys&quot; class=&quot;headerlink&quot; title=&quot;配置SSH Keys&quot;&gt;&lt;/a&gt;配置SSH Keys&lt;/h2&gt;&lt;h3 id=&quot;1-检查本机的SSH-keys的设置&quot;&gt;&lt;a href=&quot;#1-检查本机的SSH-keys的设置&quot; class=&quot;headerlink&quot; title=&quot;1.检查本机的SSH keys的设置&quot;&gt;&lt;/a&gt;1.检查本机的SSH keys的设置&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;$ cd ~/.ssh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果提示 No such file or diretory 说明你是第一次使用git&lt;br&gt;
     
     </summary>
     
@@ -191,9 +197,9 @@
     <link href="http://Meteor-chan.github.io/2016/09/03/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
     <id>http://Meteor-chan.github.io/2016/09/03/单例模式/</id>
     <published>2016-09-03T12:48:45.444Z</published>
-    <updated>2016-12-18T06:39:38.864Z</updated>
+    <updated>2016-12-18T06:46:19.353Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="单例模式的定义"><a href="#单例模式的定义" class="headerlink" title="单例模式的定义"></a>单例模式的定义</h4><p>单例模式的定义如下：<br>Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）</p>
+    <content type="html"><![CDATA[<h4 id="单例模式的定义"><a href="#单例模式的定义" class="headerlink" title="单例模式的定义"></a>单例模式的定义</h4><p>单例模式的定义如下：<br>Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）<br><a id="more"></a></p>
 <h4 id="单例模式的通用写法"><a href="#单例模式的通用写法" class="headerlink" title="单例模式的通用写法"></a>单例模式的通用写法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 饿汉式写法</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton singleton = <span class="keyword">new</span> Singleton();</div><div class="line"></div><div class="line">	<span class="comment">//让类构造方法私有化，使其不能为外界获取</span></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//通过该方法获取Singleton实例</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> singleton;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//该类中的其他方法，尽量为static方法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span></span>&#123;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 懒汉式写法</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</div><div class="line"> 	<span class="keyword">protected</span> <span class="keyword">static</span> <span class="keyword">final</span> Object object = <span class="keyword">new</span> Object();</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">	<span class="comment">//使构造方法私有化</span></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//通过该方法获取Singleton实例</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">synchronized</span>(object)&#123;</div><div class="line">			<span class="keyword">if</span>(singleton == <span class="keyword">null</span>)&#123;</div><div class="line">				singleton = <span class="keyword">new</span> Singleton();</div><div class="line">			&#125;</div><div class="line">				<span class="keyword">return</span> singleton;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//类中其他方法，尽量为static方法</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doSomwthing</span><span class="params">()</span></span>&#123;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="单例模式的优缺点"><a href="#单例模式的优缺点" class="headerlink" title="单例模式的优缺点"></a>单例模式的优缺点</h4><ul>
 <li>优点</li>
@@ -219,7 +225,7 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;单例模式的定义&quot;&gt;&lt;a href=&quot;#单例模式的定义&quot; class=&quot;headerlink&quot; title=&quot;单例模式的定义&quot;&gt;&lt;/a&gt;单例模式的定义&lt;/h4&gt;&lt;p&gt;单例模式的定义如下：&lt;br&gt;Ensure a class has only one instance
+      &lt;h4 id=&quot;单例模式的定义&quot;&gt;&lt;a href=&quot;#单例模式的定义&quot; class=&quot;headerlink&quot; title=&quot;单例模式的定义&quot;&gt;&lt;/a&gt;单例模式的定义&lt;/h4&gt;&lt;p&gt;单例模式的定义如下：&lt;br&gt;Ensure a class has only one instance,provide a global point of access to it（确保整个类中只有一个实例，并且自动实例化并向系统提供这个实例）&lt;br&gt;
     
     </summary>
     
