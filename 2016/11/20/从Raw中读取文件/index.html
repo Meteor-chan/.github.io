@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="##从Raw中读取文件123456789101112131415161718192021222324//从Raw中读取文件转换为流inputStream is = getResource().openRowResource(R.raw.fileName);public static String getString(inputStream is)&amp;#123;	inputStreamReader i">
+<meta name="description" content="从Raw中读取文件12//从Raw中读取文件转换为流inputStream is = getResource().openRowResource(R.raw.fileName);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Meteor's Blog">
+<meta property="og:title" content="读取Raw文件">
 <meta property="og:url" content="http://Meteor-chan.github.io/2016/11/20/从Raw中读取文件/index.html">
 <meta property="og:site_name" content="Meteor's Blog">
-<meta property="og:description" content="##从Raw中读取文件123456789101112131415161718192021222324//从Raw中读取文件转换为流inputStream is = getResource().openRowResource(R.raw.fileName);public static String getString(inputStream is)&amp;#123;	inputStreamReader i">
-<meta property="og:updated_time" content="2016-11-20T14:55:22.401Z">
+<meta property="og:description" content="从Raw中读取文件12//从Raw中读取文件转换为流inputStream is = getResource().openRowResource(R.raw.fileName);">
+<meta property="og:updated_time" content="2016-12-18T06:18:18.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Meteor's Blog">
-<meta name="twitter:description" content="##从Raw中读取文件123456789101112131415161718192021222324//从Raw中读取文件转换为流inputStream is = getResource().openRowResource(R.raw.fileName);public static String getString(inputStream is)&amp;#123;	inputStreamReader i">
+<meta name="twitter:title" content="读取Raw文件">
+<meta name="twitter:description" content="从Raw中读取文件12//从Raw中读取文件转换为流inputStream is = getResource().openRowResource(R.raw.fileName);">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title>  | Meteor's Blog </title>
+  <title> 读取Raw文件 | Meteor's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -264,7 +264,7 @@
             
             
               
-                
+                读取Raw文件
               
             
           </h1>
@@ -287,6 +287,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -313,8 +331,9 @@
       
 
       
-        <p>##从Raw中读取文件<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从Raw中读取文件转换为流</span></div><div class="line">inputStream is = getResource().openRowResource(R.raw.fileName);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getString</span><span class="params">(inputStream is)</span></span>&#123;</div><div class="line">	inputStreamReader isr = <span class="keyword">null</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		isr = <span class="keyword">new</span> inputStreamReader(is,charSetType);</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	bufferReader br = <span class="keyword">new</span> bufferReader(isr);</div><div class="line">	StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		<span class="keyword">while</span>((line = br.readLine()) != <span class="keyword">null</span>)&#123;</div><div class="line"></div><div class="line">			sb.append(line);</div><div class="line">			sb.append(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> sb.toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+        <h2 id="从Raw中读取文件"><a href="#从Raw中读取文件" class="headerlink" title="从Raw中读取文件"></a>从Raw中读取文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从Raw中读取文件转换为流</span></div><div class="line">inputStream is = getResource().openRowResource(R.raw.fileName);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="从Raw中读取文件-1"><a href="#从Raw中读取文件-1" class="headerlink" title="从Raw中读取文件"></a>从Raw中读取文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从Raw中读取文件转换为流</span></div><div class="line">inputStream is = getResource().openRowResource(R.raw.fileName);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getString</span><span class="params">(inputStream is)</span></span>&#123;</div><div class="line">	inputStreamReader isr = <span class="keyword">null</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		isr = <span class="keyword">new</span> inputStreamReader(is,charSetType);</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	bufferReader br = <span class="keyword">new</span> bufferReader(isr);</div><div class="line">	StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		<span class="keyword">while</span>((line = br.readLine()) != <span class="keyword">null</span>)&#123;</div><div class="line"></div><div class="line">			sb.append(line);</div><div class="line">			sb.append(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> sb.toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -334,6 +353,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
       
 
       
@@ -399,8 +424,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -419,7 +453,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -428,7 +462,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -460,6 +494,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#从Raw中读取文件"><span class="nav-number">1.</span> <span class="nav-text">从Raw中读取文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从Raw中读取文件-1"><span class="nav-number">2.</span> <span class="nav-text">从Raw中读取文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

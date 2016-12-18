@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Meteor-chan.github.io/"/>
-  <updated>2016-12-18T06:01:54.766Z</updated>
+  <updated>2016-12-18T06:18:45.392Z</updated>
   <id>http://Meteor-chan.github.io/</id>
   
   <author>
@@ -20,10 +20,12 @@
     <link href="http://Meteor-chan.github.io/2016/11/23/%E5%9B%BE%E8%A7%A3HTTP%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>http://Meteor-chan.github.io/2016/11/23/图解HTTP第一章读书笔记/</id>
     <published>2016-11-23T15:24:23.387Z</published>
-    <updated>2016-12-18T06:01:54.766Z</updated>
+    <updated>2016-12-18T06:18:45.392Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Web及网络基础"><a href="#Web及网络基础" class="headerlink" title="Web及网络基础"></a>Web及网络基础</h2><h3 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP/IP协议"></a>TCP/IP协议</h3><h4 id="TCP-IP协议的分层管理"><a href="#TCP-IP协议的分层管理" class="headerlink" title="TCP/IP协议的分层管理"></a>TCP/IP协议的分层管理</h4><p>TCP/IP协议族按层次分为四层，分别为：应用层，传输层，网络层，数据链路层</p>
+    <content type="html"><![CDATA[<p>TCP/IP协议族按层次分为四层，分别为：应用层，传输层，网络层，数据链路层</p>
 <ul>
+<li>应用层：决定了向用户提供应用服务通信的活动，预存了通用的通信的各种协议，比如说FTP(File Transfer Protocol,文件传输协议)，DNS(Domin Name System,域名系统)，HTTP协议等等。<a id="more"></a>
+<h2 id="Web及网络基础"><a href="#Web及网络基础" class="headerlink" title="Web及网络基础"></a>Web及网络基础</h2><h3 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP/IP协议"></a>TCP/IP协议</h3><h4 id="TCP-IP协议的分层管理"><a href="#TCP-IP协议的分层管理" class="headerlink" title="TCP/IP协议的分层管理"></a>TCP/IP协议的分层管理</h4>TCP/IP协议族按层次分为四层，分别为：应用层，传输层，网络层，数据链路层</li>
 <li>应用层：决定了向用户提供应用服务通信的活动，预存了通用的通信的各种协议，比如说FTP(File Transfer Protocol,文件传输协议)，DNS(Domin Name System,域名系统)，HTTP协议等等。</li>
 <li></li>
 </ul>
@@ -31,7 +33,9 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Web及网络基础&quot;&gt;&lt;a href=&quot;#Web及网络基础&quot; class=&quot;headerlink&quot; title=&quot;Web及网络基础&quot;&gt;&lt;/a&gt;Web及网络基础&lt;/h2&gt;&lt;h3 id=&quot;TCP-IP协议&quot;&gt;&lt;a href=&quot;#TCP-IP协议&quot; class=&quot;head
+      &lt;p&gt;TCP/IP协议族按层次分为四层，分别为：应用层，传输层，网络层，数据链路层&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用层：决定了向用户提供应用服务通信的活动，预存了通用的通信的各种协议，比如说FTP(File Transfer Protocol,文件传输协议)，DNS(Domin Name System,域名系统)，HTTP协议等等。
     
     </summary>
     
@@ -43,21 +47,26 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>读取Raw文件</title>
     <link href="http://Meteor-chan.github.io/2016/11/20/%E4%BB%8ERaw%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6/"/>
     <id>http://Meteor-chan.github.io/2016/11/20/从Raw中读取文件/</id>
     <published>2016-11-20T14:30:52.495Z</published>
-    <updated>2016-11-20T14:55:22.401Z</updated>
+    <updated>2016-12-18T06:18:18.928Z</updated>
     
-    <content type="html"><![CDATA[<p>##从Raw中读取文件<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从Raw中读取文件转换为流</span></div><div class="line">inputStream is = getResource().openRowResource(R.raw.fileName);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getString</span><span class="params">(inputStream is)</span></span>&#123;</div><div class="line">	inputStreamReader isr = <span class="keyword">null</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		isr = <span class="keyword">new</span> inputStreamReader(is,charSetType);</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	bufferReader br = <span class="keyword">new</span> bufferReader(isr);</div><div class="line">	StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		<span class="keyword">while</span>((line = br.readLine()) != <span class="keyword">null</span>)&#123;</div><div class="line"></div><div class="line">			sb.append(line);</div><div class="line">			sb.append(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> sb.toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
+    <content type="html"><![CDATA[<h2 id="从Raw中读取文件"><a href="#从Raw中读取文件" class="headerlink" title="从Raw中读取文件"></a>从Raw中读取文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从Raw中读取文件转换为流</span></div><div class="line">inputStream is = getResource().openRowResource(R.raw.fileName);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="从Raw中读取文件-1"><a href="#从Raw中读取文件-1" class="headerlink" title="从Raw中读取文件"></a>从Raw中读取文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从Raw中读取文件转换为流</span></div><div class="line">inputStream is = getResource().openRowResource(R.raw.fileName);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getString</span><span class="params">(inputStream is)</span></span>&#123;</div><div class="line">	inputStreamReader isr = <span class="keyword">null</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		isr = <span class="keyword">new</span> inputStreamReader(is,charSetType);</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	bufferReader br = <span class="keyword">new</span> bufferReader(isr);</div><div class="line">	StringBuffer sb = <span class="keyword">new</span> StringBuffer();</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">		<span class="keyword">while</span>((line = br.readLine()) != <span class="keyword">null</span>)&#123;</div><div class="line"></div><div class="line">			sb.append(line);</div><div class="line">			sb.append(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">	&#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> sb.toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;##从Raw中读取文件&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div c
+      &lt;h2 id=&quot;从Raw中读取文件&quot;&gt;&lt;a href=&quot;#从Raw中读取文件&quot; class=&quot;headerlink&quot; title=&quot;从Raw中读取文件&quot;&gt;&lt;/a&gt;从Raw中读取文件&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//从Raw中读取文件转换为流&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;inputStream is = getResource().openRowResource(R.raw.fileName);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
+      <category term="Android" scheme="http://Meteor-chan.github.io/categories/Android/"/>
+    
+    
+      <category term="java" scheme="http://Meteor-chan.github.io/tags/java/"/>
     
   </entry>
   
