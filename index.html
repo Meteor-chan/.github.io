@@ -606,18 +606,107 @@
 
       
         
-          <h2 id="软件准备"><a href="#软件准备" class="headerlink" title="软件准备"></a>软件准备</h2><p><a href="https://nodejs.org/zh-cn/">Node.js</a><br><a href="https://git-scm.com/">Git</a></p>
+          
+            <h2 id="软件准备"><a href="#软件准备" class="headerlink" title="软件准备"></a>软件准备</h2><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Node.js</a><br><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></p>
 <h2 id="配置SSH-Keys"><a href="#配置SSH-Keys" class="headerlink" title="配置SSH Keys"></a>配置SSH Keys</h2><h3 id="1-检查本机的SSH-keys的设置"><a href="#1-检查本机的SSH-keys的设置" class="headerlink" title="1.检查本机的SSH keys的设置"></a>1.检查本机的SSH keys的设置</h3><blockquote>
 <p>$ cd ~/.ssh</p>
 </blockquote>
-<p>如果提示 No such file or diretory 说明你是第一次使用git<br>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/12/使用Github-Hexo搭建博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>如果提示 No such file or diretory 说明你是第一次使用git</p>
+<h3 id="2-生成新的SSH-keys："><a href="#2-生成新的SSH-keys：" class="headerlink" title="2.生成新的SSH keys："></a>2.生成新的SSH keys：</h3><blockquote>
+<p>$ ssh-keygen -t rsa -C “example@email.com”</p>
+</blockquote>
+<p>注意：上面的C为大写，之后的邮箱地址填上你自己的邮箱地址。 </p>
+<p>接着系统会要求你输入密码，这个将在你提交项目的时候会使用到。如果为空，提交项目时将不使用。</p>
+<blockquote>
+<p>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;<br>Enter same passphrase again:&lt;再次输入加密串&gt;</p>
+</blockquote>
+<p>注意：在提交密码时，是没有*字样的，所以直接输入就好<br>最后看到如下图所示，SSH key 设置就成功了<br><img src="http://oddhmbjny.bkt.clouddn.com/ssh-key-set.png" alt="SSH key"></p>
+<h3 id="3-添加SSH-key到Github账户"><a href="#3-添加SSH-key到Github账户" class="headerlink" title="3.添加SSH key到Github账户"></a>3.添加SSH key到Github账户</h3><p>在本机上生成SSH key之后，需要将SSH key添加到Github账户中以完成链接。</p>
+<ul>
+<li>首先在C盘Administrator(用户)文件夹下，找到.ssh文件夹，如果找不到文件夹，需要设置显示隐藏文件。在该文件夹下找到id_rsa.pub，使用文本编辑器打开。复制此文件所有内容。</li>
+<li>登陆Github账户，打开setting界面，找到SSH and GPG keys项，点击 New SSH key</li>
+<li>将在id_rsa.pub文件复制的内容粘贴到Key那一栏，点击Add  SSH key完成添加</li>
+</ul>
+<h3 id="4-测试"><a href="#4-测试" class="headerlink" title="4.测试"></a>4.测试</h3><p>输入以下命令进行测试</p>
+<blockquote>
+<p>$ ssh -T git@github.com</p>
+</blockquote>
+<p>如果显示如下，则输入yes就好</p>
+<blockquote>
+<p>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p>
+</blockquote>
+<p>输入之后，将显示</p>
+<blockquote>
+<p>Hi Meteor-chan! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<h2 id="配置用户信息"><a href="#配置用户信息" class="headerlink" title="配置用户信息"></a>配置用户信息</h2><p>在完成了SSH与Github的链接之后，我们需要设置用户信息。</p>
+<blockquote>
+<p>$ git config –global user.name “name</p>
+<p>$ git config –global user.email “example@email.com”</p>
+</blockquote>
+<p>注意: 用户名跟邮箱需要填写真实的。</p>
+<h2 id="SSH-key成功配置"><a href="#SSH-key成功配置" class="headerlink" title="SSH key成功配置"></a>SSH key成功配置</h2><p>这样本机便成功连接到github了。</p>
+<h2 id="使用Github-Pages建立博客"><a href="#使用Github-Pages建立博客" class="headerlink" title="使用Github Pages建立博客"></a>使用Github Pages建立博客</h2><p>Github Pages通常有两种，第一种是基于你用户名建立的UserName.github.io的组织站，另一种是基于项目的Pages，通常我们搭建博客使用的是第一种。具体步骤如下</p>
+<ol>
+<li>登陆Github账户，创建一个repository，Repository name为username.github.io(此处的username为你的用户名)</li>
+<li>进入该项目，点击Settings，找到Launch automatic page generator并点击，一直下一步即可。</li>
+<li>通过<a href="http://username.github.io访问静态网站，如[Meteor-chan.github.io][4" target="_blank" rel="external">http://username.github.io访问静态网站，如[Meteor-chan.github.io][4</a>]</li>
+</ol>
+<h2 id="使用Hexo主题"><a href="#使用Hexo主题" class="headerlink" title="使用Hexo主题"></a>使用Hexo主题</h2><p>Hexo是一个简单，快速的博客发布工具，支持Markdown格式</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在Git中输入</p>
+<blockquote>
+<p>$ npm install hexo-cli g </p>
+<p>$npm install hexo –save</p>
+</blockquote>
+<h3 id="Hexo初始化"><a href="#Hexo初始化" class="headerlink" title="Hexo初始化"></a>Hexo初始化</h3><p>在电脑中新建一个名字叫Hexo的文件夹,在该文件夹下右键打开Git Bash</p>
+<blockquote>
+<p>$ hexo init</p>
+<p>$ npm install</p>
+</blockquote>
+<p>接着Hexo会自动在该文件夹建立所需要的文件，安装完之后可以通过<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>查看效果，如果不能查看，也没有关系，可在部署到Github后查看。</p>
+<h3 id="安装Hexo插件"><a href="#安装Hexo插件" class="headerlink" title="安装Hexo插件"></a>安装Hexo插件</h3><blockquote>
+<ol>
+<li>npm install hexo-generator-index –save</li>
+<li>npm install hexo-generator-archive –save</li>
+<li>npm install hexo-generator-category –save</li>
+<li>npm install hexo-generator-tag –save</li>
+<li>npm install hexo-server –save</li>
+<li>npm install hexo-deployer-git –save</li>
+<li>npm install hexo-deployer-heroku –save</li>
+<li>npm install hexo-deployer-rsync –save</li>
+<li>npm install hexo-deployer-openshift –save</li>
+<li>npm install hexo-renderer-marked@0.2 –save</li>
+<li>npm install hexo-renderer-stylus@0.3 –save</li>
+<li>npm install hexo-generator-feed@1 –save</li>
+<li>npm install hexo-generator-sitemap@1 –save</li>
+</ol>
+</blockquote>
+<h3 id="Hexo主题设置"><a href="#Hexo主题设置" class="headerlink" title="Hexo主题设置"></a>Hexo主题设置</h3><p>这里以主题jacman为例。</p>
+<h4 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1.安装主题"></a>1.安装主题</h4><blockquote>
+<p>$ hexo clean </p>
+<p>$ git clone <a href="https://github.com/wuchong/jacman.git" target="_blank" rel="external">https://github.com/wuchong/jacman.git</a> themes/jacman</p>
+</blockquote>
+<h4 id="2-启用主题"><a href="#2-启用主题" class="headerlink" title="2.启用主题"></a>2.启用主题</h4><p>修改Hexo文件夹下的_config.yml中的theme属性，将其修改为jacman</p>
+<h4 id="3-更新主题"><a href="#3-更新主题" class="headerlink" title="3.更新主题"></a>3.更新主题</h4><blockquote>
+<p>$ cd theme/jacman</p>
+<p>$ git pull </p>
+<p>$ hexo g</p>
+</blockquote>
+<h3 id="部署Hexo到Github"><a href="#部署Hexo到Github" class="headerlink" title="部署Hexo到Github"></a>部署Hexo到Github</h3><p>在Hexo文件夹中打开_config.yml文件并进行如下修改</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repo: git@github.com:Meteor-chan/Meteor-chan.github.io.git<br>  branch: master</p>
+</blockquote>
+<h3 id="常用Hexo命令"><a href="#常用Hexo命令" class="headerlink" title="常用Hexo命令"></a>常用Hexo命令</h3><blockquote>
+<p>hexo new “postname”      # 新建文章<br>hexo new page “pagename”   #新建页面<br>hexo generator   # 生成静态页面至public文件夹<br>hexo server  # 生成预览界面<br>hexo deploy # 将.deploy目录部署到Gtihub</p>
+</blockquote>
+<h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><blockquote>
+<p>hexo n == hexo new<br>hexo g == hexo generator<br>hexo s == hexo server<br>hexo d == hexo deploy</p>
+</blockquote>
+<p>使用hexo n “postname”命令可以新建一篇文章,然后通过hexo g -d可以将其部署到Github中。</p>
+<h2 id="自定义404页面"><a href="#自定义404页面" class="headerlink" title="自定义404页面"></a>自定义404页面</h2><p>在主题的source文件夹下新建一个404.html，内容如下<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=utf-8;"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"robots"</span> <span class="attr">content</span>=<span class="string">"all"</span> /&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"robots"</span> <span class="attr">content</span>=<span class="string">"index,follow"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Meteor<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://www.qq.com/404/search_children.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> <span class="attr">homePageUrl</span>=<span class="string">"http://yoursite.com/yourPage.html "</span> <span class="attr">homePageName</span>=<span class="string">"回到我的主页"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>homePageUrl，homePageName两个参数可自主定义<br>这里使用的404页面是<a href="http://www.qq.com/404/" target="_blank" rel="external">腾讯公益404</a><br>再次执行hexo g -d即可快速部署</p>
+
+          
         
       
     </div>
