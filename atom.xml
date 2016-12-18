@@ -75,22 +75,14 @@
     <link href="http://Meteor-chan.github.io/2016/09/12/%E4%BD%BF%E7%94%A8Github-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://Meteor-chan.github.io/2016/09/12/使用Github-Hexo搭建博客/</id>
     <published>2016-09-11T16:16:27.000Z</published>
-    <updated>2016-09-12T13:24:33.510Z</updated>
+    <updated>2016-12-18T06:25:21.096Z</updated>
     
     <content type="html"><![CDATA[<h2 id="软件准备"><a href="#软件准备" class="headerlink" title="软件准备"></a>软件准备</h2><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Node.js</a><br><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></p>
 <h2 id="配置SSH-Keys"><a href="#配置SSH-Keys" class="headerlink" title="配置SSH Keys"></a>配置SSH Keys</h2><h3 id="1-检查本机的SSH-keys的设置"><a href="#1-检查本机的SSH-keys的设置" class="headerlink" title="1.检查本机的SSH keys的设置"></a>1.检查本机的SSH keys的设置</h3><blockquote>
 <p>$ cd ~/.ssh</p>
 </blockquote>
-<p>如果提示 No such file or diretory 说明你是第一次使用git</p>
+<p>如果提示 No such file or diretory 说明你是第一次使用git<br><a id="more"></a></p>
 <h3 id="2-生成新的SSH-keys："><a href="#2-生成新的SSH-keys：" class="headerlink" title="2.生成新的SSH keys："></a>2.生成新的SSH keys：</h3><blockquote>
-<p>$ ssh-keygen -t rsa -C “example@email.com”<br><a id="more"></a></p>
-<h2 id="软件准备-1"><a href="#软件准备-1" class="headerlink" title="软件准备"></a>软件准备</h2><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">Node.js</a><br><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></p>
-</blockquote>
-<h2 id="配置SSH-Keys-1"><a href="#配置SSH-Keys-1" class="headerlink" title="配置SSH Keys"></a>配置SSH Keys</h2><h3 id="1-检查本机的SSH-keys的设置-1"><a href="#1-检查本机的SSH-keys的设置-1" class="headerlink" title="1.检查本机的SSH keys的设置"></a>1.检查本机的SSH keys的设置</h3><blockquote>
-<p>$ cd ~/.ssh</p>
-</blockquote>
-<p>如果提示 No such file or diretory 说明你是第一次使用git</p>
-<h3 id="2-生成新的SSH-keys：-1"><a href="#2-生成新的SSH-keys：-1" class="headerlink" title="2.生成新的SSH keys："></a>2.生成新的SSH keys：</h3><blockquote>
 <p>$ ssh-keygen -t rsa -C “example@email.com”</p>
 </blockquote>
 <p>注意：上面的C为大写，之后的邮箱地址填上你自己的邮箱地址。 </p>
@@ -191,9 +183,7 @@
 &lt;h2 id=&quot;配置SSH-Keys&quot;&gt;&lt;a href=&quot;#配置SSH-Keys&quot; class=&quot;headerlink&quot; title=&quot;配置SSH Keys&quot;&gt;&lt;/a&gt;配置SSH Keys&lt;/h2&gt;&lt;h3 id=&quot;1-检查本机的SSH-keys的设置&quot;&gt;&lt;a href=&quot;#1-检查本机的SSH-keys的设置&quot; class=&quot;headerlink&quot; title=&quot;1.检查本机的SSH keys的设置&quot;&gt;&lt;/a&gt;1.检查本机的SSH keys的设置&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;$ cd ~/.ssh&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;如果提示 No such file or diretory 说明你是第一次使用git&lt;/p&gt;
-&lt;h3 id=&quot;2-生成新的SSH-keys：&quot;&gt;&lt;a href=&quot;#2-生成新的SSH-keys：&quot; class=&quot;headerlink&quot; title=&quot;2.生成新的SSH keys：&quot;&gt;&lt;/a&gt;2.生成新的SSH keys：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;$ ssh-keygen -t rsa -C “example@email.com”&lt;br&gt;
+&lt;p&gt;如果提示 No such file or diretory 说明你是第一次使用git&lt;br&gt;
     
     </summary>
     
